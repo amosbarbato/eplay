@@ -22,6 +22,6 @@ export const Content = styled.section<Omit<Props, 'title' | 'games'>>`
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 24px;
+    gap: 24px;
   }
 `

@@ -3,6 +3,7 @@ import Header from './components/header'
 import Global from './styles'
 
 import Rota from './routes'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Header />
       </div>
       <Rota />
+      <Footer />
     </BrowserRouter>
   )
 }

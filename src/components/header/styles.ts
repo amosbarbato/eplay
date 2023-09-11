@@ -13,10 +13,6 @@ export const HeaderBar = styled.header`
   a {
     font-size: 16px;
     font-weight: 700;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   div {

@@ -4,7 +4,8 @@ export const color = {
   gray: '#333',
   darkGray: '#111',
   lightGray: '#eee',
-  btnPrimary: '#10ac84'
+  btnPrimary: '#10ac84',
+  secondaryGray: '#a3a3a3'
 }
 
 const Global = createGlobalStyle`
@@ -25,6 +26,10 @@ const Global = createGlobalStyle`
   a {
     color: ${color.lightGray};
     text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .container {

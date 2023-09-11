@@ -1,15 +1,19 @@
 import * as S from './styles'
 import eplayLogo from '../../assets/logo.svg'
 import shoppingCart from '../../assets/shopping-cart.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => (
   <S.HeaderBar>
     <div>
-      <img src={eplayLogo} alt="" />
+      <Link to="/">
+        <img src={eplayLogo} alt="eplay" />
+      </Link>
+
       <nav>
         <S.Links>
           <li>
-            <a href="#">Categorias</a>
+            <Link to="/categories">Categorias</Link>
           </li>
           <li>
             <a href="#">Novidades</a>

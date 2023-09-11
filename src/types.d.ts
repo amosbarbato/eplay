@@ -4,7 +4,7 @@ export interface GalleryItem {
 }
 
 export type Game = {
-  title: string
+  name: string
   id: number
   name: string
   description: string
