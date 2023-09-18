@@ -5,7 +5,14 @@ export const color = {
   darkGray: '#111',
   lightGray: '#eee',
   btnPrimary: '#10ac84',
-  secondaryGray: '#a3a3a3'
+  secondaryGray: '#a3a3a3',
+  spanGray: '#999',
+  borderGray: '#686868'
+}
+
+export const breakpoint = {
+  desktop: '1024px',
+  tablet: '768px'
 }
 
 const Global = createGlobalStyle`
@@ -36,6 +43,10 @@ const Global = createGlobalStyle`
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: ${breakpoint.desktop}) {
+      max-width: 80%;
+    }
   }
 `
 

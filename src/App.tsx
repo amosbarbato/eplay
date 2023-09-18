@@ -7,6 +7,7 @@ import Global from './styles'
 import Rota from './routes'
 import Footer from './components/footer'
 import { store } from './store'
+import Cart from './components/cart'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         </div>
         <Rota />
         <Footer />
+        <Cart />
       </BrowserRouter>
     </Provider>
   )

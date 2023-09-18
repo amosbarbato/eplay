@@ -11,11 +11,17 @@ const Home = () => {
     return (
       <>
         <Banner />
-        <ProductList title="Promoçoes" background="gray" games={onSaleGames} />
+        <ProductList
+          title="Promoçoes"
+          background="gray"
+          games={onSaleGames}
+          id="on-sale"
+        />
         <ProductList
           title="Em Breve"
           background="darkGray"
           games={onSoonGames}
+          id="coming-soon"
         />
       </>
     )

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from '../../styles'
+import { breakpoint, color } from '../../styles'
 
 export const HeaderBar = styled.header`
   background-color: ${color.gray};
@@ -9,6 +9,10 @@ export const HeaderBar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${breakpoint.tablet}) {
+    display: none;
+  }
 
   a {
     font-size: 16px;
@@ -27,7 +31,8 @@ export const Links = styled.ul`
   gap: 16px;
 `
 
-export const LinkCart = styled.a`
+export const CartButton = styled.a`
+  cursor: pointer;
   display: flex;
   gap: 16px;
 `
