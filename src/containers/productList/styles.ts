@@ -6,11 +6,11 @@ import { Card } from '../../components/product/styles'
 export const Content = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
   background-color: ${(props) =>
-    props.background === 'darkGray' ? color.darkGray : color.gray};
+    props.background === 'darkGray' ? color.gray : color.darkGray};
 
   ${Card} {
     background-color: ${(props) =>
-      props.background === 'darkGray' ? color.gray : color.darkGray};
+      props.background === 'darkGray' ? color.darkGray : color.gray};
   }
 
   h2 {
