@@ -6,6 +6,7 @@ export const Footer = styled.footer`
   background-color: ${color.gray};
   padding: 32px 0;
   font-size: 14px;
+  margin-top: 40px;
 `
 
 export const FooterSection = styled.div`
