@@ -70,6 +70,7 @@ export const CartButton = styled.a`
 
 export const Hamburguer = styled.div`
   width: 32px;
+  display: none;
 
   span {
     height: 2px;
@@ -77,10 +78,10 @@ export const Hamburguer = styled.div`
     width: 100%;
     background-color: ${color.lightGray};
     margin-bottom: 4px;
+  }
 
-    @media (min-width: ${breakpoint.tablet}) {
-      display: block;
-    }
+  @media (max-width: ${breakpoint.tablet}) {
+    display: block;
   }
 `
 
@@ -88,6 +89,17 @@ export const NavMobile = styled.nav`
   display: none;
 
   &.is-open {
-    display: block;
+    margin-top: 22px;
+    border-top: 1px solid rgba(104, 104, 104, 0.2);
+
+    li {
+      &:hover {
+        background-color: rgba(104, 104, 104, 0.2);
+      }
+    }
+
+    @media (max-width: ${breakpoint.tablet}) {
+      display: block;
+    }
   }
 `

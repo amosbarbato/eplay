@@ -1,5 +1,6 @@
 import { styled } from 'styled-components'
 import { TagContainer } from '../tag/styles'
+import { breakpoint } from '../../styles'
 
 export const Image = styled.div`
   width: 100%;
@@ -30,6 +31,10 @@ export const Image = styled.div`
 
     span {
       text-decoration-line: line-through;
+    }
+
+    @media (max-width: ${breakpoint.tablet}) {
+      font-size: 20px;
     }
   }
 

@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 export type Props = {
-  type: 'button' | 'link'
+  type: 'button' | 'link' | 'submit'
   title: string
   to?: string
   onClick?: () => void
@@ -9,11 +9,11 @@ export type Props = {
 }
 
 const Button = ({ type, title, to, onClick, variant = 'primary' }: Props) => {
-  if (type === 'button') {
+  if (type === 'button' || type === 'submit') {
     return (
       <S.ButtonContainer
         variant={variant}
-        type="button"
+        type={type}
         title={title}
         onClick={onClick}
       >

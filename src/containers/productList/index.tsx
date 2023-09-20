@@ -1,7 +1,9 @@
-import * as S from './styles'
 import Product from '../../components/product'
+
 import { Game } from '../../types'
 import { formatPrice } from '../../components/utiles'
+
+import * as S from './styles'
 
 export type Props = {
   title: string

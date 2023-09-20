@@ -1,13 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux'
-
-import * as S from './styles'
-import eplayLogo from '../../assets/logo.svg'
-import shoppingCart from '../../assets/shopping-cart.svg'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 
 import { open } from '../../store/reducers/card'
 import { RootReducer } from '../../store'
-import { useState } from 'react'
+
+import eplayLogo from '../../assets/logo.svg'
+import shoppingCart from '../../assets/shopping-cart.svg'
+
+import * as S from './styles'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -35,13 +37,31 @@ const Header = () => {
           <nav>
             <S.Links>
               <li>
-                <Link to="/categories">Categorias</Link>
+                <Link
+                  title="Clique aqui para acessar a página de Categorias"
+                  to="/categories"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Categorias
+                </Link>
               </li>
               <li>
-                <a href="#">Novidades</a>
+                <HashLink
+                  title="Clique aqui para acessar a seçao de Em Breve"
+                  to="/#coming-soon"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Novidades
+                </HashLink>
               </li>
               <li>
-                <a href="#">Promoções</a>
+                <HashLink
+                  title="Clique aqui para acessar a seçao de Promoções"
+                  to="/#on-sale"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Promoções
+                </HashLink>
               </li>
             </S.Links>
           </nav>
@@ -56,13 +76,28 @@ const Header = () => {
       <S.NavMobile className={isMenuOpen ? 'is-open' : ''}>
         <S.Links>
           <li>
-            <Link to="/categories">Categorias</Link>
+            <Link
+              title="Clique aqui para acessar a página de Categorias"
+              to="/categories"
+            >
+              Categorias
+            </Link>
           </li>
           <li>
-            <a href="#">Novidades</a>
+            <HashLink
+              title="Clique aqui para acessar a seçao de Em Breve"
+              to="/#coming-soon"
+            >
+              Novidades
+            </HashLink>
           </li>
           <li>
-            <a href="#">Promoções</a>
+            <HashLink
+              title="Clique aqui para acessar a seçao de Promoções"
+              to="/#on-sale"
+            >
+              Promoções
+            </HashLink>
           </li>
         </S.Links>
       </S.NavMobile>

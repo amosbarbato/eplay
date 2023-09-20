@@ -1,7 +1,7 @@
 import { styled } from 'styled-components'
 import { TagContainer } from '../tag/styles'
 import { Link } from 'react-router-dom'
-import { color } from '../../styles'
+import { breakpoint, color } from '../../styles'
 
 export const Card = styled(Link)`
   background-color: ${color.gray};
@@ -23,6 +23,10 @@ export const Card = styled(Link)`
     margin: 8px 0;
     font-size: 16px;
     font-weight: 700;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      font-size: 22px;
+    }
   }
 
   p {
@@ -35,6 +39,10 @@ export const Card = styled(Link)`
 
   ${TagContainer} {
     margin-right: 8px;
+
+    @media (max-width: ${breakpoint.tablet}) {
+      font-size: 12px;
+    }
   }
 `
 

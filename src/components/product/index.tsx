@@ -1,5 +1,6 @@
-import * as S from './styles'
 import Tag from '../tag'
+
+import * as S from './styles'
 
 type Props = {
   title: string

@@ -2,11 +2,12 @@ import { useState } from 'react'
 
 import Section from '../../components/section'
 import { GalleryItem } from '../../types'
-import * as S from './styles'
 
 import play from '../../assets/play.png'
 import zoom from '../../assets/zoom.png'
 import closeIcon from '../../assets/close.png'
+
+import * as S from './styles'
 
 type Props = {
   defaultCover: string
