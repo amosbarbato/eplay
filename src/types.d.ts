@@ -1,9 +1,9 @@
-export interface GalleryItem {
+declare interface GalleryItem {
   type: 'image' | 'video'
   url: string
 }
 
-export type Game = {
+declare type Game = {
   name: string
   id: number
   name: string

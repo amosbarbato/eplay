@@ -4,8 +4,8 @@ import ProductList from '../../containers/productList'
 import { useGetOnSaleQuery, useGetSoonQuery } from '../../services/api'
 
 const Home = () => {
-  const { data: onSaleGames } = useGetOnSaleQuery()
-  const { data: onSoonGames } = useGetSoonQuery()
+  const { data: onSaleGames, isLoading: isLoadingSale } = useGetOnSaleQuery()
+  const { data: onSoonGames, isLoading: isLoadingSoon } = useGetSoonQuery()
 
   if (onSaleGames && onSoonGames) {
     return (
@@ -16,12 +16,14 @@ const Home = () => {
           background="gray"
           games={onSaleGames}
           id="on-sale"
+          isLoading={isLoadingSale}
         />
         <ProductList
           title="Em Breve"
           background="darkGray"
           games={onSoonGames}
           id="coming-soon"
+          isLoading={isLoadingSoon}
         />
       </>
     )

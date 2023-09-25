@@ -40,6 +40,12 @@ export const Sidebar = styled.aside`
     max-width: 100%;
     width: 100%;
   }
+
+  .empyt-text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
 `
 
 export const CartItem = styled.li`

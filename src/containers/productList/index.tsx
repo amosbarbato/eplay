@@ -1,18 +1,19 @@
 import Product from '../../components/product'
 
-import { Game } from '../../types'
 import { formatPrice } from '../../components/utiles'
 
 import * as S from './styles'
+import Loader from '../../components/loader'
 
 export type Props = {
   title: string
   background: 'gray' | 'darkGray'
-  games: Game[]
+  games?: Game[]
   id?: string
+  isLoading: boolean
 }
 
-const ProductList = ({ background, title, games, id }: Props) => {
+const ProductList = ({ background, title, games, id, isLoading }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
 
@@ -30,23 +31,28 @@ const ProductList = ({ background, title, games, id }: Props) => {
     return tags
   }
 
+  if (isLoading) {
+    return <Loader />
+  }
+
   return (
     <S.Content id={id} background={background}>
       <div className="container">
         <h2>{title}</h2>
         <ul>
-          {games.map((game) => (
-            <Product
-              id={game.id}
-              key={game.id}
-              title={game.name}
-              category={game.details.category}
-              system={game.details.system}
-              description={game.description}
-              infos={getGameTags(game)}
-              image={game.media.thumbnail}
-            />
-          ))}
+          {games &&
+            games.map((game) => (
+              <Product
+                id={game.id}
+                key={game.id}
+                title={game.name}
+                category={game.details.category}
+                system={game.details.system}
+                description={game.description}
+                infos={getGameTags(game)}
+                image={game.media.thumbnail}
+              />
+            ))}
         </ul>
       </div>
     </S.Content>
